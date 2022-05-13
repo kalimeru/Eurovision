@@ -15,14 +15,14 @@ ui <- fluidPage(
         sidebarPanel(
           radioButtons(
             inputId = "source",
-            label = "Cançons:",
+            label = "Songs:",
             choices = c(
-              "Totes les cançons" = "all",
-              "Cançons guanyadores" = "winners"
+              "All Songs" = "all",
+              "Winner Songs" = "winners"
             )
           ),
           hr(),
-          numericInput("num", "Quantitat de paraules (mínim 3)",
+          numericInput("num", "Quantitat de paraules (min. 3)",
                        value = 100, min = 3
           ),
           hr(),
