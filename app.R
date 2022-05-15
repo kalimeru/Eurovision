@@ -197,6 +197,8 @@ ui <- fluidPage(
       em("Llicencia: "),HTML('<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>'),
       br(),
       em("Publicacio: "),HTML('<a href="http://www.shinyapps.io/">Shinyapps</a>'),
+      br(),
+      em("Codi: "),HTML('<a href="https://github.com/kalimeru/Eurovision">GitHub</a>'),
       br()
     )
   )
