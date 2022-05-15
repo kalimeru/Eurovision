@@ -4,7 +4,7 @@ library(wordcloud2)
 library(colourpicker)
 
 ui <- fluidPage(
-  h1("Eurovision Word Cloud"),
+  h1("Eurovision Songs"),
   h4("Daniel Ponce"),
   # Contenidor
   tabsetPanel(
@@ -15,10 +15,10 @@ ui <- fluidPage(
         sidebarPanel(
           radioButtons(
             inputId = "source",
-            label = "Songs:",
+            label = "Cancons:",
             choices = c(
-              "All Songs" = "all",
-              "Winner Songs" = "winners"
+              "Totes les cancons" = "all",
+              "Cancons guanyadores" = "winners"
             )
           ),
           hr(),
@@ -28,7 +28,7 @@ ui <- fluidPage(
           hr(),
           colourInput("col", "Color de fons", value = "white"),
           hr(),
-          HTML('<p>Pràctica de Visualització de Dades de la <a href="https://uoc.edu">UOC</a></p>')
+          HTML('<p>Data Visualization, universitat <a href="https://uoc.edu">UOC</a></p>')
         ),
         mainPanel(
           wordcloud2Output("cloud"),
@@ -36,6 +36,24 @@ ui <- fluidPage(
           br()
         )
       )
+    ),
+    # Panell about
+    tabPanel(
+      title = "About",
+      br(),
+      "Aquesta app ha estat creada amb ", HTML('<a href="https://cran.r-project.org/">R</a>') ," com a practica de lassignatura Visualitzacio de 
+      Dades del master de Ciencia de Dades (maig 2022)",
+      br(),
+      br(),
+      em("Autor: "), "Daniel Ponce",
+      br(),
+      em("Dades: "),HTML('Compren totes les cancons participants al festival Eurovision
+                         des de 1975 fins al 2021 i es pot trobar a <a href="https://www.kaggle.com/datasets/minitree/eurovision-song-lyrics">Kaggle</a>'),
+      br(),
+      em("Llicencia: "),HTML('<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>'),
+      br(),
+      em("Publicacio: "),HTML('<a href="http://www.shinyapps.io/">Shinyapps</a>'),
+      br()
     )
   )
 )
