@@ -1,0 +1,13 @@
+name: Eurovision
+title: Eurovision
+username:
+account: daniponce
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6296627
+bundleId: 5908662
+url: https://daniponce.shinyapps.io/Eurovision/
+when: 1652645328.52792
+lastSyncTime: 1652645328.52792
+asMultiple: FALSE
+asStatic: FALSE
